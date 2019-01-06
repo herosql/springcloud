@@ -1,0 +1,1 @@
+java -jar zipkin.jar --zipkin.collector.rabbitmq.addresses=localhost --zipkin.sender.type=web

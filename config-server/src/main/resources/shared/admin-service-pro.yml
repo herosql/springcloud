@@ -1,0 +1,22 @@
+
+server:
+  port: 9998
+
+spring:
+  boot:
+    admin:
+      routes:
+        endpoints: env,metrics,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,loggers,auditevents,hystrix.stream,activiti
+      turbine:
+        clusters: default
+        location: monitor-service
+
+
+eureka:
+  instance:
+    metadata-map:
+      user.name: admin
+      user.password: 123456
+
+logging:
+  file: "logs/admin-service-pro.log"

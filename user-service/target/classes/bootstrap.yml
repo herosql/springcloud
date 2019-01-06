@@ -1,0 +1,24 @@
+#spring:
+#  application:
+#      name: user-service
+#  cloud:
+#    config:
+#      uri: http://localhost:8769
+#  profiles:
+#    active: pro
+
+spring:
+  application:
+    name: user-service
+  cloud:
+      config:
+        discovery:
+          enabled: true #开启通过服务来访问Config Server的功能
+          service-id: config-server #在eureka中注册的服务名
+  profiles:
+      active: pro
+#        name: client-b #在git上的配置文件名
+#        profile: test #测试文件 
+#        label: master #在git主分支中
+
+

@@ -1,0 +1,45 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
+# remote git
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/herosql/Springcloud_config
+          searchPaths: /shared
+          username: herosql
+          password: qwer@1234
+      label: master
+      force-pull: true
+  application:
+      name: config-server
+  rabbitmq:
+        host: localhost
+        port: 5672
+        username: guest
+        password: guest
+        publisher-confirms: true
+        virtual-host: /
+
+server:
+  port: 8769
+
+# ---native
+#spring:
+#  cloud:
+#    config:
+#      server:
+#        native:
+#          search-locations: classpath:/shared
+#  profiles:
+#     active: native
+#  application:
+#    name: config-server
+#
+## port
+#server:
+#  port: 8769
