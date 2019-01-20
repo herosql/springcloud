@@ -18,28 +18,12 @@ spring:
   application:
       name: config-server
   rabbitmq:
-        host: localhost
+        host: 192.168.3.163
         port: 5672
-        username: guest
-        password: guest
+        username: rabbitadmin
+        password: 123456
         publisher-confirms: true
         virtual-host: /
 
 server:
   port: 8769
-
-# ---native
-#spring:
-#  cloud:
-#    config:
-#      server:
-#        native:
-#          search-locations: classpath:/shared
-#  profiles:
-#     active: native
-#  application:
-#    name: config-server
-#
-## port
-#server:
-#  port: 8769
