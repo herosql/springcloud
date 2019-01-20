@@ -1,1 +1,1 @@
-java -jar zipkin.jar --zipkin.collector.rabbitmq.addresses=localhost --zipkin.sender.type=web
+java -jar zipkin.jar --zipkin.collector.rabbitmq.addresses=192.168.3.163 --zipkin.collector.rabbitmq.username=rabbitadmin --zipkin.collector.rabbitmq.password=123456 --zipkin.sender.type=web
