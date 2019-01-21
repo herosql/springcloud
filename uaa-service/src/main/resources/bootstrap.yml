@@ -2,7 +2,9 @@ spring:
   application:
     name: uaa-service
   cloud:
-    config:
-      uri: http://localhost:8769
+        config:
+          discovery:
+            enabled: true #开启通过服务来访问Config Server的功能
+            service-id: config-server #在eureka中注册的服务名
   profiles:
-    active: pro
+      active: pro
